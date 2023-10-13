@@ -1,0 +1,27 @@
+// This is your Prisma schema file,
+// learn more about it in the docs	https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Movie {
+  Title    String
+  Images   String[]
+  id       Int     @id @default(autoincrement())
+  QRcode   QRcode? @relation(fields: [qRCodeId], references: [id])
+  qRCodeId Int?
+}
+
+model QRcode {
+  id           Int     @id @default(autoincrement())
+  uid          String
+  link         String
+  randomMovies Movie[]
+  image        String
+}

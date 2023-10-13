@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Yoke QRGen</title>
+    <link rel="stylesheet" href="/css/index.css">
+  </head>
+  <body>
+    <h1>Top 10 Movies</h1>
+    <ul>
+        {{#each movies}}
+            <li>
+                <h2>{{this.Title}}</h2>
+                <img src="{{ this.Images.[0] }}" alt="{{this.Title}} Poster" />
+            </li>
+        {{/each}}
+    </ul>
+  </body>
+</html>
