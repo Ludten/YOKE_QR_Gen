@@ -54,4 +54,4 @@ You can customize the application by modifying the configuration files and addin
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 ## Acknowledgments
 
-    Thanks to the NestJS and Prisma communities for their great tools and documentation.
+Thanks to the NestJS and Prisma communities for their great tools and documentation.
