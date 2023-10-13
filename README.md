@@ -31,6 +31,12 @@ Before running this application, make sure you have the following installed:
 	```bash
 	npm run start
 
+### NOTE
+	If you use a cloud-hosted database for development, you need to create the shadow database manually.
+	To circumvent this issue
+	```bash
+	npx prisma db push
+
 The application will start on http://localhost:3000 by default.
 
 ## Usage
