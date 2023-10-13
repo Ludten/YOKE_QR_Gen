@@ -9,6 +9,7 @@ async function bootstrap() {
   app.useStaticAssets(resolve('./src/public'));
   app.setBaseViewsDir(resolve('./src/views'));
   app.setViewEngine('hbs');
-  await app.listen(3000);
+  const PORT = process.env.PORT || 3000;
+  await app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 }
 bootstrap();
